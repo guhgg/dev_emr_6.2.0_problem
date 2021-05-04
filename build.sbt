@@ -70,6 +70,7 @@ lazy val commonDependencies = Seq(
     dependencies.json4sNative,
     dependencies.hudiSparkBundle,
     dependencies.sparkAvro,
+    dependencies.mysqlConnectorJava
 )
 
 

@@ -95,7 +95,7 @@ object LakeInsertion {
     }
 
     def historicalHandler(database: String, table: String, table_id: String, currentDate: String, dateSplit: Array[String]): Unit = {
-        var df = spark.read.parquet(s"s3://mmlake-landing-zone/debezium/sqoop_final/warmachine/pedido/")
+        var df = spark.read.parquet(s"s3://mmlake-landing-zone/new_scd/sqoop_final/warmachine/pedido/")
         println("AFTER READING")
         df = df.withColumn("__op", lit("s"))
         df = df.withColumn("__table", lit(table))
